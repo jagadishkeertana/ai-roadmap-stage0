@@ -28,8 +28,14 @@ def timed(func):
 def clean_row(row:dict[str,str])->Optional[dict[str,str|int]]:
     name=row.get("name","").strip()
     age_str=row.get("age","").strip()
+
     if not name or not age_str:
         return None
+    if any(char.isdigit() for char in name):
+        return None
+
+
+    
     try:
         age=int(age_str)
     except ValueError:
