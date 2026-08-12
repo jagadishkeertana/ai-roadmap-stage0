@@ -34,7 +34,7 @@ def clean_row(row:dict[str,str])->Optional[dict[str,str|int]]:
         age=int(age_str)
     except ValueError:
         return None
-    if age <= 0 or age > 120:
+    if age <= 0 or age > 130:
         return None
     
     return {"name":name,"age":age}
