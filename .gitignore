@@ -1,3 +1,5 @@
 venv/
+venv_backup/
 people.json
+people.db
 __pycache__/
